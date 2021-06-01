@@ -60,4 +60,22 @@ public function destroymessage($id) {
   
     }
 
+    public function searchmoto(){
+        
+        return view('auth.verification');
+    }
+
+public function searching(Request $r){
+
+    // $r->validate([
+    //     'searchPhrase' => 'required|min:3',
+    // ]);       
+
+
+    
+    
+    return redirect()->back()->with('message', ' This Motocyclist is registered at Pascalmoto!');
+
+}
+
 }

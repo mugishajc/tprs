@@ -196,3 +196,11 @@ Route::get('/Attend', [ManageAttendanceController::class,'attend'])
     Route::get('DeleteLostDevices/{id}','LostdevicesController@destroymessage')
     ->middleware('auth');
     
+
+    Route::get('/Vx/Public/Verify/PascalMoto','LostdevicesController@searchmoto');
+
+        
+    Route::post('/shakisha','LostdevicesController@searching')->name('search');
+   
+    
+    
