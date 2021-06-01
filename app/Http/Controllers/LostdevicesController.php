@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Motari;
 use Auth;
 use Validator;
 use App\LostDevices;
@@ -65,16 +66,21 @@ public function destroymessage($id) {
         return view('auth.verification');
     }
 
-public function searching(Request $r){
+public function searching(Request $request){
 
-    // $r->validate([
-    //     'searchPhrase' => 'required|min:3',
-    // ]);       
+        $input=$request['searchPhrase'];
+        $result=Motari::where('PLATE_NUMBER','=',$input)
+            ->orWhere('ID_NUMBER','=',$input)->first();
 
+   if ($result){
+       return redirect()->back()->with('message', "This Motocyclist is registered at Pascalmoto! \n With Name of ".$result->NAMES);
 
+   }else{
+       return redirect()->back()->with('message', "This Motocyclist is  Not registered at Pascalmoto!");
+
+   }
     
     
-    return redirect()->back()->with('message', ' This Motocyclist is registered at Pascalmoto!');
 
 }
 

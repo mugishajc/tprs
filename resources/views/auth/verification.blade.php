@@ -17,7 +17,7 @@
             <div class="svg-wrapper">
              
             </div>
-            <input required id="searchPhrase" type="text" placeholder="Search for Motorcyclist by NID,Plate Number ? " />
+            <input required name="searchPhrase" id="searchPhrase" type="text" placeholder="Search for Motorcyclist by NID,Plate Number ? " />
           </div>
           <div class="input-field second-wrap">
             <button class="btn-search" type="submit">
