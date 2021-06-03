@@ -75,8 +75,6 @@ public function destroymessage($id) {
             $input=$request['searchPhrase'];
             $result=Motari::where('PLATE_NUMBER','=',$input)
                 ->orWhere('ID_NUMBER','=',$input)
-                ->orWhere('Ref_Number','=',$input)
-                
                 ->first();
     
        if ($result){
