@@ -4,6 +4,7 @@ use App\Motari;
 use Auth;
 use Validator;
 use App\LostDevices;
+use App\Motari;
 use Illuminate\Support\Facades\Hash;
 use DB;
 use App\Http\Controllers\Controller;
@@ -66,6 +67,7 @@ public function destroymessage($id) {
         return view('auth.verification');
     }
 
+<<<<<<< Updated upstream
 public function searching(Request $request){
 
         $input=$request['searchPhrase'];
@@ -79,9 +81,30 @@ public function searching(Request $request){
        return redirect()->back()->with('message', "This Motocyclist is  Not registered at Pascalmoto!");
 
    }
+=======
+
+    public function searching(Request $request){
+
+        // $r->validate([
+        //     'searchPhrase' => 'required|min:3',
+        // ]);       
+            $input=$request['searchPhrase'];
+            $result=Motari::where('PLATE_NUMBER','=',$input)
+                ->orWhere('ID_NUMBER','=',$input)
+                ->orWhere('Ref_Number','=',$input)
+                
+                ->first();
     
+       if ($result){
+           return redirect()->back()->with('message', "This Motocyclist is registered at Pascalmoto! \n With Name of ".$result->NAMES." \n Mubazi : YES");
+    
+       }else{
+           return redirect()->back()->with('message', "This Motocyclist is  Not registered at Pascalmoto! \n Mubazi : No");
+>>>>>>> Stashed changes
+    
+       }
     
 
-}
+    }
 
 }

@@ -17,8 +17,13 @@
             <div class="svg-wrapper">
              
             </div>
+<<<<<<< Updated upstream
             <input required name="searchPhrase" id="searchPhrase" type="text" placeholder="Search for Motorcyclist by NID,Plate Number ? " />
           </div>
+=======
+         
+            <input required name="searchPhrase" id="searchPhrase" type="text" placeholder="Search for Motorcyclist by NID,Plate Number ? " /> </div>
+>>>>>>> Stashed changes
           <div class="input-field second-wrap">
             <button class="btn-search" type="submit">
               
@@ -43,7 +48,7 @@
   @endif
   @if(session()->has('message'))
     <div class="alert alert-success">
-    <button type="button" class="close" data-dismiss="alert">×</button>
+    <button type="button" class="close" data-dismiss="alert">o</button>
         {{ session()->get('message') }}
     </div>
 @endif
