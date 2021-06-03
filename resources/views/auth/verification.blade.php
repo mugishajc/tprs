@@ -17,13 +17,9 @@
             <div class="svg-wrapper">
              
             </div>
-<<<<<<< Updated upstream
-            <input required name="searchPhrase" id="searchPhrase" type="text" placeholder="Search for Motorcyclist by NID,Plate Number ? " />
-          </div>
-=======
          
             <input required name="searchPhrase" id="searchPhrase" type="text" placeholder="Search for Motorcyclist by NID,Plate Number ? " /> </div>
->>>>>>> Stashed changes
+
           <div class="input-field second-wrap">
             <button class="btn-search" type="submit">
               
