@@ -4,7 +4,6 @@ use App\Motari;
 use Auth;
 use Validator;
 use App\LostDevices;
-use App\Motari;
 use Illuminate\Support\Facades\Hash;
 use DB;
 use App\Http\Controllers\Controller;
