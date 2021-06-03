@@ -67,21 +67,6 @@ public function destroymessage($id) {
         return view('auth.verification');
     }
 
-<<<<<<< Updated upstream
-public function searching(Request $request){
-
-        $input=$request['searchPhrase'];
-        $result=Motari::where('PLATE_NUMBER','=',$input)
-            ->orWhere('ID_NUMBER','=',$input)->first();
-
-   if ($result){
-       return redirect()->back()->with('message', "This Motocyclist is registered at Pascalmoto! \n With Name of ".$result->NAMES);
-
-   }else{
-       return redirect()->back()->with('message', "This Motocyclist is  Not registered at Pascalmoto!");
-
-   }
-=======
 
     public function searching(Request $request){
 
@@ -100,7 +85,7 @@ public function searching(Request $request){
     
        }else{
            return redirect()->back()->with('message', "This Motocyclist is  Not registered at Pascalmoto! \n Mubazi : No");
->>>>>>> Stashed changes
+
     
        }
     
